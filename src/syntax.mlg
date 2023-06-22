@@ -1,0 +1,9 @@
+DECLARE PLUGIN "autocoq-plugin.plugin"
+
+{
+  open Ltac_plugin
+}
+
+TACTIC EXTEND autocoq_tactic
+| ["ac_isabelle"] -> { Main.ac_isabelle }
+END

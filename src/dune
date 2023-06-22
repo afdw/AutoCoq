@@ -1,0 +1,9 @@
+(library
+ (name autocoq_plugin)
+ (public_name autocoq-plugin.plugin)
+ (flags :standard -rectypes -w -27)
+ (libraries coq-core.vernac coq-core.plugins.ltac yojson)
+ (preprocess (pps ppx_deriving.show ppx_deriving_yojson)))
+
+(coq.pp
+ (modules syntax))

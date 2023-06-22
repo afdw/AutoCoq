@@ -1,0 +1,4 @@
+(coq.theory
+ (name AutoCoqPlugin)
+ (package autocoq-plugin)
+ (plugins autocoq-plugin.plugin))
