@@ -1,4 +1,5 @@
 (coq.theory
  (name AutoCoqPlugin)
  (package autocoq-plugin)
- (plugins autocoq-plugin.plugin))
+ (plugins autocoq-plugin.plugin)
+ (theories Hammer TLC))

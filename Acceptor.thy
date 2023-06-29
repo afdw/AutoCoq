@@ -40,7 +40,8 @@ fun accept_cmd st input = (
     val ctxt = Toplevel.context_of st;
     val input_json = Nano_Json_Parser.json_of_string input;
     val term = term_of_json input_json
-    val term_string = Syntax.string_of_term (Config.put show_types true ctxt) term
+    val term_string =
+      Syntax.string_of_term (ctxt |> Config.put show_types true) term
   in
     writeln term_string;
     Thm.cterm_of ctxt term |> ignore;
