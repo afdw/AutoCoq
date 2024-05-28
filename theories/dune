@@ -2,4 +2,5 @@
  (name AutoCoqPlugin)
  (package autocoq-plugin)
  (plugins autocoq-plugin.plugin)
- (theories Hammer TLC))
+ (modules AutoCoq Tests))
+; (theories Hammer TLC)

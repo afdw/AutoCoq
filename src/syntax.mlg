@@ -5,5 +5,5 @@ DECLARE PLUGIN "autocoq-plugin.plugin"
 }
 
 TACTIC EXTEND autocoq_tactic
-| ["ac_isabelle"] -> { Main.ac_isabelle }
+| ["ac_isabelle"] -> { Isabelle.ac_isabelle }
 END
