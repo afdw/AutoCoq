@@ -17,4 +17,9 @@
  (name autocoq-plugin)
  (synopsis "AutoCoq Coq plugin")
  (description "AutoCoq Coq plugin")
- (depends ocaml dune coq-core))
+ (depends
+  ocaml
+  dune
+  coq-core
+  (lwt (>= 5.7.0))
+  (cohttp-lwt-unix (>= 5.3.0))))

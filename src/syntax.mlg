@@ -1,9 +1,21 @@
 DECLARE PLUGIN "autocoq-plugin.plugin"
 
 {
+  open Stdarg
   open Ltac_plugin
 }
 
 TACTIC EXTEND autocoq_tactic
-| ["ac_isabelle"] -> { Isabelle.ac_isabelle }
+| [ "ac_isabelle" ] -> {
+    Isabelle.ac_isabelle
+  }
+| [ "ac_tactic_proof_search" string(url) ] -> {
+    Tactic_proof_search.entry_tactic_proof_search url
+  }
+END
+
+VERNAC COMMAND EXTEND AutocoqCommand CLASSIFIED AS SIDEFF
+| [ "Ac_term_predict_deconstruct" constr(t_constr_expr) ] -> {
+    Term_predict.command_deconstruct t_constr_expr
+  }
 END
